@@ -4,7 +4,13 @@ Uses SQLite. Rate limiting is implemented using JavaScript `Map`.
 
 ## Initialize project
 
-Register an OAuth client on the Google API Console. Paste the client ID and secret to a `.env` file.
+Register an OAuth client on the Google API Console with the redirect URI pointed to `/login/google/callback`.
+
+```
+http://localhost:4321/login/google/callback
+```
+
+Paste the client ID and secret to a `.env` file.
 
 ```bash
 GOOGLE_CLIENT_ID=""
@@ -22,3 +28,7 @@ Run the application:
 ```
 pnpm dev
 ```
+
+## Notes
+
+- TODO: Update redirect URI
